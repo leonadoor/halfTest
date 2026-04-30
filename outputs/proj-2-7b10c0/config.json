@@ -1,0 +1,18 @@
+{
+  "rss_feeds": [
+    "https://www.theverge.com/rss/ai/index.xml",
+    "https://www.wired.com/feed/category/ai/latest/rss",
+    "https://venturebeat.com/ai/feed/",
+    "https://www.technologyreview.com/ai/feed/",
+    "https://ai.googleblog.com/feeds/posts/default",
+    "https://openai.com/blog/rss.xml",
+    "https://deepmind.com/blog/feed/basic/",
+    "https://blogs.nvidia.com/ai/feed/"
+  ],
+  "settings": {
+    "output_directory": "./output",
+    "log_level": "INFO",
+    "fetch_timeout": 30,
+    "max_retries": 3
+  }
+}
