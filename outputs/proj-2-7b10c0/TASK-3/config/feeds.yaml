@@ -1,0 +1,59 @@
+# AI News RSS Feed Configuration
+# This file defines the RSS sources to fetch from
+
+feeds:
+  - name: "MIT Technology Review - AI"
+    url: "https://www.technologyreview.com/topic/artificial-intelligence/feed"
+    category: "Research"
+    priority: 10
+    enabled: true
+    update_hours: 24
+
+  - name: "AI News - VentureBeat"
+    url: "https://venturebeat.com/category/ai/feed/"
+    category: "Industry"
+    priority: 9
+    enabled: true
+    update_hours: 12
+
+  - name: "Google AI Blog"
+    url: "https://ai.googleblog.com/atom.xml"
+    category: "Research"
+    priority: 10
+    enabled: true
+    update_hours: 24
+
+  - name: "OpenAI Blog"
+    url: "https://openai.com/blog/rss.xml"
+    category: "Research"
+    priority: 10
+    enabled: true
+    update_hours: 12
+
+  - name: "AI Research Papers - arXiv"
+    url: "http://export.arxiv.org/rss/cs.AI"
+    category: "Research"
+    priority: 8
+    enabled: true
+    update_hours: 24
+
+  - name: "TechCrunch - AI"
+    url: "https://techcrunch.com/tag/artificial-intelligence/feed/"
+    category: "Industry"
+    priority: 8
+    enabled: true
+    update_hours: 12
+
+  - name: "Synced - AI News"
+    url: "https://syncedreview.com/feed/"
+    category: "Industry"
+    priority: 7
+    enabled: true
+    update_hours: 24
+
+  - name: "The AI Blog - Microsoft"
+    url: "https://blogs.microsoft.com/ai/feed/"
+    category: "Industry"
+    priority: 9
+    enabled: true
+    update_hours: 24
