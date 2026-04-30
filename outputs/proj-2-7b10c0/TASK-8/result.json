@@ -1,0 +1,15 @@
+{
+  "task_code": "TASK-8",
+  "summary": "已完成部署依赖配置与最终验证：补齐运行时依赖，修复 TASK-3 主入口导入与默认路径问题，修复时区感知发布时间过滤问题，并使用本地 RSS 伪源完成 TASK-3 CLI、TASK-5 run-once 调度和 TASK-6 自动化测试的可复现验证。",
+  "artifacts": [
+    "Deployment_Validation_Report.md",
+    "requirements.txt",
+    "final_validation.py",
+    "validation_output/validation_summary.json",
+    "validation_output/main_reports/ai_news_2026-04-30.md",
+    "validation_output/scheduler_reports/ai_news_2026-04-30.md",
+    "validation_output/scheduler_logs/scheduler.log",
+    "validation_output/scheduler_logs/last_run.json"
+  ],
+  "status": "completed"
+}

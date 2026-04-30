@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Local AI News Fixture</title>
+    <link>http://localhost/</link>
+    <description>Fixture feed for TASK-8 validation</description>
+    <item>
+      <title>Local Model Release Reaches Production</title>
+      <link>https://example.com/local-model-release</link>
+      <pubDate>Thu, 30 Apr 2026 09:15:00 +0800</pubDate>
+      <description>Deployment fixture article used to validate markdown generation.</description>
+    </item>
+    <item>
+      <title>Agent Workflow Passes Final Validation</title>
+      <link>https://example.com/agent-validation</link>
+      <pubDate>Thu, 30 Apr 2026 10:30:00 +0800</pubDate>
+      <description>Scheduler run-once fixture article used to validate report output.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,7 @@
+feeds:
+  - name: "Local Validation Feed"
+    url: "http://127.0.0.1:54314/local_feed.xml"
+    category: "Validation"
+    priority: 10
+    enabled: true
+    update_hours: 24

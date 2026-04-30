@@ -1,5 +1,5 @@
 import logging
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from typing import List
 from ..models.article import Article
 
@@ -55,12 +55,14 @@ class ArticleFilter:
         if self.time_window_hours <= 0:
             return articles
 
-        cutoff_time = reference_time - timedelta(hours=self.time_window_hours)
+        normalized_reference_time = self._normalize_datetime(reference_time)
+        cutoff_time = normalized_reference_time - timedelta(hours=self.time_window_hours)
         recent_articles = []
 
         for article in articles:
             if article.published_at:
-                if article.published_at >= cutoff_time:
+                published_at = self._normalize_datetime(article.published_at)
+                if published_at >= cutoff_time:
                     recent_articles.append(article)
                 else:
                     self.logger.debug(f"Article too old: {article.title[:50]}... ({article.published_at})")
@@ -69,6 +71,12 @@ class ArticleFilter:
                 recent_articles.append(article)
 
         return recent_articles
+
+    def _normalize_datetime(self, value: datetime) -> datetime:
+        """Convert datetimes into naive UTC values so comparisons are stable."""
+        if value.tzinfo is None:
+            return value
+        return value.astimezone(timezone.utc).replace(tzinfo=None)
 
     def _filter_by_summary(self, articles: List[Article]) -> List[Article]:
         """Filter articles based on summary requirements."""

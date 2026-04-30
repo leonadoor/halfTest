@@ -12,11 +12,17 @@ import sys
 from datetime import datetime
 from pathlib import Path
 
-# Add src directory to path for imports
-sys.path.insert(0, str(Path(__file__).parent / "src"))
+BASE_DIR = Path(__file__).resolve().parent
+SRC_DIR = BASE_DIR / "src"
 
-from schedulers.job_runner import JobRunner
-from utils.logger import setup_logger
+# Add project roots to path for package imports.
+if str(BASE_DIR) not in sys.path:
+    sys.path.insert(0, str(BASE_DIR))
+if str(SRC_DIR) not in sys.path:
+    sys.path.insert(0, str(SRC_DIR))
+
+from src.schedulers.job_runner import JobRunner
+from src.utils.logger import setup_logger
 
 
 def main():
@@ -32,13 +38,13 @@ def main():
         "--config",
         type=str,
         help="Path to feed configuration file",
-        default="config/feeds.yaml"
+        default=str(BASE_DIR / "config" / "feeds.yaml")
     )
     parser.add_argument(
         "--output",
         type=str,
         help="Output directory for reports",
-        default="output/reports"
+        default=str(BASE_DIR / "output" / "reports")
     )
     parser.add_argument(
         "--log-level",
