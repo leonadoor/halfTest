@@ -1,0 +1,16 @@
+scheduler:
+  timezone: Asia/Shanghai
+  cron:
+    hour: 8
+    minute: 0
+  job:
+    id: ai_news_daily_digest
+    coalesce: true
+    max_instances: 1
+    misfire_grace_time: 1800
+  pipeline:
+    config_path: ../TASK-3/config/feeds.yaml
+    output_dir: ../TASK-4/generated_reports
+    log_dir: logs
+    log_level: INFO
+    retention_days: 14
