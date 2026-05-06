@@ -1,3 +1,0 @@
-2026-04-30 20:34:35 | ai_news_scheduler | INFO | Starting scheduled pipeline run
-2026-04-30 20:34:35 | ai_news_scheduler | INFO | Pipeline run finished in 0.02s
-2026-04-30 20:34:35 | ai_news_scheduler | INFO | Run result: {"status": "success", "executed_at": "2026-04-30T20:34:35.787030+08:00", "duration_seconds": 0.02, "stats": {"execution_time": "2026-04-30T20:34:35.785373", "target_date": "2026-04-30", "total_feeds": 1, "successful_feeds": 1, "failed_feeds": 0, "total_articles": 2, "filtered_articles": 2, "final_articles": 2, "report_path": "E:\\学习资料\\研0\\halfTest\\halfTest\\outputs\\proj-2-7b10c0\\TASK-8\\validation_output\\scheduler_reports\\ai_news_2026-04-30.md"}}
