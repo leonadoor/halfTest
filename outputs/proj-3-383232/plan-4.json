@@ -1,0 +1,55 @@
+{
+  "plan_name": "AI-News-Aggregator-Plus 架构设计与实现执行计划",
+  "tasks": [
+    {
+      "task_code": "TASK-1",
+      "task_name": "输出系统架构设计文档",
+      "description": "基于 prompt.md 为 AI-News-Aggregator-Plus 产出详细设计文档，明确项目目录结构、全部 Python 文件名及职责、核心数据结构、模块间接口定义、关键伪代码、错误处理策略与配置边界。该文档作为后续代码实现的唯一执行依据，要求逻辑严密、无歧义。",
+      "assignee": "Codex",
+      "depends_on": [],
+      "expected_output": "docs/ 或 outputs/proj-3-383232/ 下的详细设计文档，包含文件清单、JSON 数据结构、抓取/总结/输出模块接口和伪代码。"
+    },
+    {
+      "task_code": "TASK-2",
+      "task_name": "搭建项目骨架并实现抓取模块",
+      "description": "依据架构文档搭建 Python 项目结构，完成配置加载、基础数据模型、新闻抓取模块与 RSS/HackerNews 数据采集逻辑，实现标准化新闻项输出，并补充必要的单元测试或样例数据。",
+      "assignee": "Claude",
+      "depends_on": [
+        "TASK-1"
+      ],
+      "expected_output": "可运行的项目骨架、抓取模块源码、示例输入输出，以及验证抓取结果结构正确的测试。"
+    },
+    {
+      "task_code": "TASK-3",
+      "task_name": "实现摘要与报告生成模块",
+      "description": "依据架构文档实现大模型摘要模块与 Markdown 报告输出模块，完成从标准化新闻 JSON 到周报 Markdown 的转换流程，支持外部 API 调用封装、提示词组织、摘要结果清洗和输出格式化。",
+      "assignee": "Claude",
+      "depends_on": [
+        "TASK-1",
+        "TASK-2"
+      ],
+      "expected_output": "总结模块与 Markdown 输出模块源码、可配置的 API 调用封装、周报生成样例，以及对应测试或集成演示脚本。"
+    },
+    {
+      "task_code": "TASK-4",
+      "task_name": "集成主流程并执行测试验收",
+      "description": "整合抓取、总结、输出三个模块，提供主入口脚本与运行说明，执行端到端测试、异常路径检查和结果验收，确认能够稳定生成每周 AI 新闻 Markdown 报告。涉及本地文件读写、运行脚本与日志检查，优先由同服务器 Agent 执行。",
+      "assignee": "Codex",
+      "depends_on": [
+        "TASK-2",
+        "TASK-3"
+      ],
+      "expected_output": "主流程可执行脚本、测试结果记录、验收结论，以及可复现的运行命令说明。"
+    },
+    {
+      "task_code": "TASK-5",
+      "task_name": "最终代码审查与交付整理",
+      "description": "对实现结果进行最终审查，核对是否符合 TASK-1 的设计约束和 prompt.md 中的目标，检查模块边界、配置方式、测试覆盖和交付完整性，必要时提出修正并整理最终提交内容。",
+      "assignee": "Codex",
+      "depends_on": [
+        "TASK-4"
+      ],
+      "expected_output": "最终审查结论、遗留风险说明（如有）、整理后的交付物与提交记录。"
+    }
+  ]
+}
