@@ -7,7 +7,7 @@
       "description": "基于 prompt.md 为 AI-News-Aggregator-Plus 产出详细设计文档，明确项目目录结构、全部 Python 文件名及职责、核心数据结构、模块间接口定义、关键伪代码、错误处理策略与配置边界。该文档作为后续代码实现的唯一执行依据，要求逻辑严密、无歧义。",
       "assignee": "Codex",
       "depends_on": [],
-      "expected_output": "docs/ 或 outputs/proj-3-383232/ 下的详细设计文档，包含文件清单、JSON 数据结构、抓取/总结/输出模块接口和伪代码。"
+      "expected_output": "outputs/proj-3-383232/TASK-1/architecture-design.md"
     },
     {
       "task_code": "TASK-2",
@@ -17,7 +17,7 @@
       "depends_on": [
         "TASK-1"
       ],
-      "expected_output": "可运行的项目骨架、抓取模块源码、示例输入输出，以及验证抓取结果结构正确的测试。"
+      "expected_output": "outputs/proj-3-383232/TASK-2/result.md"
     },
     {
       "task_code": "TASK-3",
@@ -28,7 +28,7 @@
         "TASK-1",
         "TASK-2"
       ],
-      "expected_output": "总结模块与 Markdown 输出模块源码、可配置的 API 调用封装、周报生成样例，以及对应测试或集成演示脚本。"
+      "expected_output": "outputs/proj-3-383232/TASK-3/result.md"
     },
     {
       "task_code": "TASK-4",
@@ -39,7 +39,7 @@
         "TASK-2",
         "TASK-3"
       ],
-      "expected_output": "主流程可执行脚本、测试结果记录、验收结论，以及可复现的运行命令说明。"
+      "expected_output": "outputs/proj-3-383232/TASK-4/test-report.md"
     },
     {
       "task_code": "TASK-5",
@@ -49,7 +49,7 @@
       "depends_on": [
         "TASK-4"
       ],
-      "expected_output": "最终审查结论、遗留风险说明（如有）、整理后的交付物与提交记录。"
+      "expected_output": "outputs/proj-3-383232/TASK-5/review-summary.md"
     }
   ]
 }
